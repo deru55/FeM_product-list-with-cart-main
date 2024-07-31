@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product list with cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="order-confirmed" class="displayHidden">
+        <div class="wrapper wrapper--narrow">
+          <img src="assets/images/icon-order-confirmed.svg" alt="" />
+
+          <div>
+            <h2 class="title-section">Order Confirmed</h2>
+
+            <p>We hope you enjoy your food!</p>
+          </div>
+
+          <div class="grey-box grey-box--order-confirmed">
+            <div id="order-container"></div>
+
+            <p
+              class="total-order--order-confirmed | flex-row"
+              style="justify-content: space-between"
+            >
+              Order Total<span class="total-order"></span>
+            </p>
+          </div>
+
+          <button id="new-order-btn" class="btn btn--new-order">
+            Start New Order
+          </button>
+        </div>
+      </div>
+
+      <div class="wrapper grid-2-cols">
+        <div class="desserts-section | flow">
+          <h2 class="title-section">Desserts</h2>
+
+          <div id="desserts-card-container"></div>
+        </div>
+
+        <div class="cart-section | flow fs-200">
+          <h2 class="title-section title-section--cart">
+            Your Cart (<span id="total-number-of-items">0</span>)
+          </h2>
+
+          <div id="cart-section--default-state">
+            <img src="assets/images/illustration-empty-cart.svg" alt="" />
+            <p class="fw-medium">Your added items will appear here</p>
+          </div>
+
+          <div id="cart-section--order-state" class="displayHidden">
+            <div id="products-container"></div>
+
+            <p class="flex-row" style="justify-content: space-between">
+              Order Total<span class="total-order"></span>
+            </p>
+
+            <p class="grey-box grey-box--cart flex-row">
+              <img src="assets/images/icon-carbon-neutral.svg" alt="" />This is
+              a carbon-neutral delivery
+            </p>
+
+            <button id="confirm-btn" class="btn btn--confirm">
+              Confirm Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
